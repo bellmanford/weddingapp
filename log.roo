@@ -1,0 +1,17 @@
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-16 23:31:29
+hint
+project --topLevelPackage com.wedding
+hint
+persistence setup --provider HIBERNATE --database HYPERSONIC_PERSISTENT 
+database properties list
+entity jpa --class ~.domain.Rsvp
+field string code --notNull --sizeMin 1 --sizeMax 30
+field string email --sizeMax 30
+field number attending --type java.lang.Integer
+field string specialRequests --sizeMax 100
+field date confirmed --type java.util.Date
+test integration 
+controller scaffold ~.web.RsvpController
+selenium test --controller ~.web.RsvpController
+perform test
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-16 23:45:20
